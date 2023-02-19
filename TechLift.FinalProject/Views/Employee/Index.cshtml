@@ -1,0 +1,27 @@
+﻿@model ICollection<TechLift.FinalProject.Models.EmployeeViewModel>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Contact</th>
+            <th scope="col">Designation</th>
+            <th scope="col">Departmment</th>
+            <th scope="col">Edit</th>
+            <th scope="col">Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var emp in Model)
+        {
+            <tr>
+                <td>@emp.Name</td>
+                <td>@emp.Email</td>
+                <td>@emp.ContactNumber</td>
+                <td>@emp.Designation</td>
+                <td>@emp.Department.DepartmentName</td>
+            </tr>
+        }
+    </tbody>
+</table>

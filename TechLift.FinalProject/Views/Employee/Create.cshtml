@@ -1,0 +1,35 @@
+﻿@model TechLift.FinalProject.Models.EmployeeViewModel
+
+<form method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="form-outline mb-4 form-group">
+        <input asp-for="Name" class="form-control" />
+        <label asp-for="Name" class="form-label"></label>
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <div class="form-outline mb-4 form-group">
+        <input asp-for="ContactNumber" class="form-control" />
+        <label asp-for="ContactNumber" class="form-label"></label>
+        <span asp-validation-for="ContactNumber" class="text-danger"></span>
+    </div>
+    <div class="form-outline mb-4 form-group">
+        <input asp-for="Email" class="form-control" />
+        <label asp-for="Email" class="form-label"></label>
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+    <div class="form-outline mb-4 form-group">
+        <input asp-for="Designation" class="form-control" />
+        <label asp-for="Designation" class="form-label"></label>
+        <span asp-validation-for="Designation" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Id"></label>
+        <select asp-for="Id" class="form-control" asp-items="ViewBag.dept">
+            <option value="">Please select role</option>
+        </select>
+        <span asp-validation-for="Department" class="text-danger"></span>
+    </div>
+
+    <input type="submit" class="btn btn-primary btn-block mb-4" value="Submit" />
+</form>
+

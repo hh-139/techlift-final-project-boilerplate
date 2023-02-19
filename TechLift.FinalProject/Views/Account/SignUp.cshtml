@@ -1,0 +1,23 @@
+﻿@model TechLift.FinalProject.Dtos.User.UserSignUpDto
+
+
+<form method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="form-outline mb-4">
+        <input asp-for="EmailAddress" class="form-control" />
+        <label asp-for="EmailAddress" class="form-label"></label>
+        <span asp-validation-for="EmailAddress" class="text-danger"></span>
+    </div>
+    <div class="form-outline mb-4">
+        <input asp-for="Password" class="form-control" />
+        <label asp-for="Password" class="form-label"></label>
+        <span asp-validation-for="Password" class="text-danger"></span>
+    </div>
+    <div class="form-outline mb-4">
+        <input asp-for="ConfirmPassword" class="form-control" />
+        <label asp-for="ConfirmPassword" class="form-label"></label>
+        <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+    </div>
+
+    <input type="submit" class="btn btn-primary btn-block mb-4" value="Sign In" />
+</form>

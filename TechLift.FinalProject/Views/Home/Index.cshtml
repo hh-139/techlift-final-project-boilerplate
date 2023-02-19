@@ -1,0 +1,19 @@
+﻿@model TechLift.FinalProject.Dtos.User.CustomRecord
+
+
+<table>
+    <tr>
+        <th>Department</th>
+        <th>Employee Count</th>
+    </tr>
+    @foreach (var item in ViewBag.res_group_count)
+    {
+        <tr>
+            <td>@item.Department</td>
+            <td>@item.Count</td>
+        </tr>
+    }
+</table> 
+
+
+<p>Total Employees: @ViewBag.total_emp_count</p>
